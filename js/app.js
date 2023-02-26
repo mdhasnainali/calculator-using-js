@@ -10,11 +10,19 @@ let clearButton = document.querySelector('#clr-btn');
 let backspaceButton = document.querySelector('#backspace-btn');
 
 let calculationDone = function () {
-    let currentAns = eval(equation.innerText);
-    Ans = currentAns;
-    result.innerText = '=' + currentAns.toLocaleString("en-US");
-    console.log("Equal Pressed: " + currentAns);
-    isCalculated = true;
+    let currentAns;
+    try {
+        currentAns = eval(equation.innerText);
+        Ans = currentAns;
+        result.innerText = '=' + currentAns.toLocaleString("en-US");
+        console.log("Equal Pressed: " + currentAns);
+        isCalculated = true;
+    }
+    catch (err) {
+        result.innerText = 0;
+        alert("Please Provide Correct Input");
+    }
+
 };
 
 let operationAndRegularButtonPressed = function (e) {
