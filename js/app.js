@@ -23,7 +23,7 @@ let operationAndRegularButtonPressed = function (e) {
         equation.innerText = 0;
     }
     if (equation.innerText == '0') equation.innerText = e.target.getAttribute('value');
-    else equation.innerText += e.target.getAttribute('value');
+    else if (equation.innerText.length < 10) equation.innerText += e.target.getAttribute('value');
     console.log(e.target.getAttribute('value'));
 };
 
@@ -32,7 +32,7 @@ let clearButtonPressed = function (e) {
     result.innerText = 0;
 }
 
-let backspaceButtonPressed = function(){
+let backspaceButtonPressed = function () {
     equation.innerText = equation.innerText.substring(0, equation.innerText.length - 1);
     if (equation.innerText.length == 0) equation.innerText = 0;
 }
