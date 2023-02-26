@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/ee8f9c41a1.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./css/styles.css" />
+		<title>Calculator</title>
+	</head>
+	<body>
+		<div class="calculator">
+			<div class="display">
+                <div class="equation">0</div>
+                <div class="result">0</div>
+            </div>
+			<div class="dialPad">
+				<div class="cal-btn others-btn" id="clr-btn">AC</div>
+				<div class="cal-btn operation-btn" value="Ans">Ans</div>
+				<div class="cal-btn operation-btn" value="%"><i class="fa-solid fa-percent"></i></div>
+				<div class="cal-btn operation-btn" value="/"><i class="fa-solid fa-divide"></i></div>
+				<div class="cal-btn regular-btn" value="9">9</div>
+				<div class="cal-btn regular-btn" value="8">8</div>
+				<div class="cal-btn regular-btn" value="7">7</div>
+				<div class="cal-btn operation-btn" value="*"><i class="fa-solid fa-xmark"></i></div>
+				<div class="cal-btn regular-btn" value="6">6</div>
+				<div class="cal-btn regular-btn" value="5">5</div>
+				<div class="cal-btn regular-btn" value="4">4</div>
+				<div class="cal-btn operation-btn" value="-"><i class="fa-solid fa-minus"></i></div>
+				<div class="cal-btn regular-btn" value="3">3</div>
+				<div class="cal-btn regular-btn" value="2">2</div>
+				<div class="cal-btn regular-btn" value="1">1</div>
+				<div class="cal-btn operation-btn" value="+">
+					<i class="fa-solid fa-plus"></i>
+				</div>
+				<div class="cal-btn regular-btn" value="0">0</div>
+				<div class="cal-btn regular-btn" value=".">
+					<i class="fa-sharp fa-solid fa-circle"></i>
+				</div>
+				<div class="cal-btn others-btn" id="backspace-btn">
+					<i class="fa-sharp fa-solid fa-delete-left"></i>
+				</div>
+				<div class="cal-btn special-btn"><i class="fa-solid fa-equals" value="a"></i></div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/app.js"></script>
+	</body>
+</html>

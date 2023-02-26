@@ -1,0 +1,126 @@
+@import "./color";
+
+* {
+	font-family: "Poppins", sans-serif;
+	background-color: $background;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.calculator {
+	width: 22rem;
+	height: 35rem;
+	background-color: $regular;
+	border-radius: 20px;
+	padding: 20px 20px;
+}
+
+.display {
+	background-color: transparent;
+	margin-bottom: 10px;
+	height: 120px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+}
+
+.dialPad {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 5px;
+	background-color: $regular;
+}
+
+.cal-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 12px;
+	aspect-ratio: 1/1;
+	font-size: 1.2rem;
+}
+
+.regular-btn {
+	background-color: $regular;
+	color: $dark-primary-text;
+	border: 1px solid;
+}
+
+.operation-btn {
+	background-color: $light-primary-text;
+	color: $dark-primary-text;
+}
+
+.others-btn {
+	background-color: $regular;
+	color: $light-secondary-text;
+	border: 1px solid;
+}
+
+.special-btn {
+	background-color: $dark-primary-text;
+	color: $regular;
+}
+
+.fa-solid {
+	background-color: transparent;
+}
+
+.operation-btn > .fa-solid {
+	font-size: 1.2rem;
+}
+
+.regular-btn > .fa-solid {
+	font-size: 0.5rem;
+}
+
+.others-btn > .fa-solid {
+	font-size: 1.6rem;
+}
+
+.equation {
+	text-align: right;
+	font-size: 1.5rem;
+	color: $light-secondary-text;
+	background-color: transparent;
+}
+
+.result {
+	color: $dark-secondary-text;
+	text-align: right;
+	font-size: 2.5rem;
+	font-weight: 600;
+	background-color: transparent;
+}
+
+.regular-btn:hover {
+	background-color: $dark-primary-text;
+	color: $regular;
+}
+
+.operation-btn:hover {
+	background-color: $dark-primary-text;
+	color: $regular;
+	border: 1px solid;
+}
+
+.others-btn:hover {
+	background-color: $light-secondary-text;
+	color: white;
+}
+
+.special-btn:hover {
+	color: $dark-primary-text;
+	background-color: $regular;
+	border: 1px solid;
+}

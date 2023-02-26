@@ -1,0 +1,124 @@
+* {
+  font-family: "Poppins", sans-serif;
+  background-color: #DAF0FF;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 22rem;
+  height: 35rem;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px 20px;
+}
+
+.display {
+  background-color: transparent;
+  margin-bottom: 10px;
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.dialPad {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  background-color: white;
+}
+
+.cal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  aspect-ratio: 1/1;
+  font-size: 1.2rem;
+}
+
+.regular-btn {
+  background-color: white;
+  color: #109DFF;
+  border: 1px solid;
+}
+
+.operation-btn {
+  background-color: #ade2ff;
+  color: #109DFF;
+}
+
+.others-btn {
+  background-color: white;
+  color: #858585;
+  border: 1px solid;
+}
+
+.special-btn {
+  background-color: #109DFF;
+  color: white;
+}
+
+.fa-solid {
+  background-color: transparent;
+}
+
+.operation-btn > .fa-solid {
+  font-size: 1.2rem;
+}
+
+.regular-btn > .fa-solid {
+  font-size: 0.5rem;
+}
+
+.others-btn > .fa-solid {
+  font-size: 1.6rem;
+}
+
+.equation {
+  text-align: right;
+  font-size: 1.5rem;
+  color: #858585;
+  background-color: transparent;
+}
+
+.result {
+  color: #424242;
+  text-align: right;
+  font-size: 2.5rem;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.regular-btn:hover {
+  background-color: #109DFF;
+  color: white;
+}
+
+.operation-btn:hover {
+  background-color: #109DFF;
+  color: white;
+  border: 1px solid;
+}
+
+.others-btn:hover {
+  background-color: #858585;
+  color: white;
+}
+
+.special-btn:hover {
+  color: #109DFF;
+  background-color: white;
+  border: 1px solid;
+}/*# sourceMappingURL=styles.css.map */
