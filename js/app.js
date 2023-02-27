@@ -25,14 +25,18 @@ let calculationDone = function () {
 
 };
 
-let operationAndRegularButtonPressed = function (e) {
+let findPressedButton = function (e) {
+    operationAndRegularButtonPressed(e.target.getAttribute('value'));
+}
+
+let operationAndRegularButtonPressed = function (button) {
     if (isCalculated == true) {
         isCalculated = false;
         equation.innerText = 0;
     }
-    if (equation.innerText == '0') equation.innerText = e.target.getAttribute('value');
-    else if (equation.innerText.length < 10) equation.innerText += e.target.getAttribute('value');
-    console.log(e.target.getAttribute('value'));
+    if (equation.innerText == '0') equation.innerText = button;
+    else if (equation.innerText.length < 10) equation.innerText += button;
+    console.log(button);
 };
 
 let clearButtonPressed = function (e) {
@@ -45,12 +49,23 @@ let backspaceButtonPressed = function () {
     if (equation.innerText.length == 0) equation.innerText = 0;
 }
 
+let isKeyPressed = function (e) {
+    let keys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "-", "*", "/", "%", "."];
+
+    if (keys.includes(e.key)) operationAndRegularButtonPressed(e.key);
+    else if (e.key == 'Enter') calculationDone();
+    else if (e.key == 'Backspace') backspaceButtonPressed();
+    console.log(e.key);
+}
+
+document.addEventListener('keyup', isKeyPressed);
+
 operationButton.forEach((button) => {
-    button.addEventListener('click', operationAndRegularButtonPressed);
+    button.addEventListener('click', findPressedButton);
 });
 
 regularButton.forEach((button) => {
-    button.addEventListener('click', operationAndRegularButtonPressed);
+    button.addEventListener('click', findPressedButton);
 });
 
 specialButton.addEventListener('click', calculationDone);
